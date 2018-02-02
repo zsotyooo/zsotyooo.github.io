@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/solarized.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+<section data-markdown data-transition="zoom">
+<textarea data-template>
+# VUE's your daddy?
+![Vue](img/vue.png)
+</textarea>
+</section>
+<section data-markdown data-transition="convex-in slide-out">
+<textarea data-template>
+## Why Vue?
+![Vue](img/vue.png)
+</textarea>
+</section>
+<section data-markdown data-transition="slide">
+<textarea data-template>
+### Sales pitch
+1. library < Vue < framework 
+2. Very lightweight (20K!)
+3. Super fast DOM manipulation (faster than jQuery) 
+4. Easy set up (webpack & go) 
+5. Quick learning curve (no complicated concepts) 
+6. CLI tool
+7. Single file format `(*.vue)`
+8. Typescript support
+</textarea>
+</section>
+<section data-markdown data-transition="slide">
+<textarea data-template>
+### Learning it
+- https://vuejs.org/v2/guide/
+- https://github.com/vuejs/vue-class-component
+- https://github.com/kaorun343/vue-property-decorator
+</textarea>
+</section>
+<section data-markdown data-transition="convex-in slide-out">
+<textarea data-template>
+## I can do components with jQuery
+![Wheel](img/wheel.jpg)
+</textarea>
+</section>
+<section data-markdown>
+<textarea data-template>
+HTML
+```html
+<div class="multiplier"
+  data-component="multiplier"
+  data-multiplier="2"
+  data-numbers="[1,2,3]">
+    <h3>Multiplied numbers</h3>
+    <div class="js-numbers"></div>
+</div>
+```
+SCSS
+```css
+.multiplier{border: 1px solid red;}
+```
+</textarea>
+</section>
+<section data-markdown>
+<textarea data-template>
+Javascript
+```js
+var Multiplier = function(el) {
+  this.$el = $(el);
+  this.$result = $('.js-numbers', el);
+  this.multiplier = this.$el.data('multiplier');
+  this.numbers = JSON.parse(this.$el.data('numbers'));
+
+  var that = this;
+
+  var multiplyArr = function(arr) {
+    return arr.map(function(val){
+      return val * that.multiplier;
+    })
+  }
+
+  var getResultHtml = function(arr) {
+    return '<p>' + arr.join('</p><p>') + '</p>';
+  }
+
+  this.$result.html(getResultHtml(multiplyArr(this.numbers));
+}
+
+$(function(){
+  $('[data-component="multiplier"]').each(function(){
+    new Multiplier(this);
+  });  
+});
+```
+</textarea>
+</section>
+<section data-markdown>
+<textarea data-template>
+## How about?
+- How about the defaults? 
+- How about error handling? 
+- How about applying to AJAX results? 
+- How about passing data to other components? 
+- How about following data changes? 
+- How about proper element addressing (".js-something-something") 
+... 
+</textarea>
+</section>
+<section data-markdown data-transition="convex-in slide-out">
+<textarea data-template>
+## How about VUE?
+![Wheel](img/wheel2.jpg)
+</textarea>
+</section>
+<section data-markdown>
+<textarea data-template>
+HTML
+```html
+<multiplier
+  :numbers="[1,2,3]"
+  multiplier="2">
+</multiplier>
+```
+</textarea>
+</section>
+<section data-markdown>
+<textarea data-template>
+VUE single file component
+```html
+<template>
+  <div class="multiplier">
+    <h1>Multiplier</h1>
+    <p v-for="n in numbers">
+      {{ multiply(n) }}
+    </p>
+  </div>
+</template>
+<script lang="ts">
+import Vue from 'vue';
+import { Component, Prop } from 'vue-property-decorator';
+@Component({
+  name: 'multiplier'
+})
+export class Multiplier extends Vue {
+  @Prop({default: []})
+  numbers: number[];
+  
+  @Prop({default: 1})
+  multiplier: number;
+
+  multiply(n:number):number {
+    return this.multiplier * n;
+  }
+}
+</script>
+<style lang="scss">
+.multiplier{border: 1px solid red;}
+</style>
+```
+</textarea>
+</section>
+<section data-markdown data-transition="convex-in slide-out">
+<textarea data-template>
+## The "BUT"-s
+![Denial](img/denial.jpg)
+</textarea>
+</section>
+<section data-markdown>
+<textarea data-template>
+### BUT in Internet explorer...
+- IE8+
+</textarea>
+</section>
+<section data-markdown>
+<textarea data-template>
+### BUT Accessibilty...
+- bind to selector
+- inline template
+```html
+<my-component inline-template>
+  <div class="my-component">
+    ....
+  </div>
+</my-component>
+```
+</textarea>
+</section>
+<section data-markdown>
+<textarea data-template>
+### BUT SEO...
+- bind to selector
+- inline template
+</textarea>
+</section>
+<section data-markdown>
+<textarea data-template>
+### BUT not everybody knows Vue...
+- Well known concepts used
+- Very good documentation
+- Very quick learning curve
+- Very good community
+</textarea>
+</section>
+<section data-markdown data-transition="convex-in slide-out">
+<textarea data-template>
+_"So what you are saying that it is low calorie, high in fiber, won't make me fat, will keep me young, fill me up without making me feel bloated, and will help me meet man."_
+
+![Apple](img/eve.jpg)
+</textarea>
+</section>
+<section data-markdown>
+<textarea data-template>
+### Keeru project examples
+- https://github.com/inviqa/bosch-onsite/tree/develop/assets/Yves/onsite/app/vue-components
+</textarea>
+</section>
+<section data-markdown>
+<textarea data-template>
+### Want more?
+- https://vuex.vuejs.org/en/
+- https://weex.apache.org/
+</textarea>
+</section>
+<section data-markdown>
+<textarea data-template>
+### Read more
+- https://medium.com/js-dojo/7-ways-to-define-a-component-template-in-vuejs-c04e0c72900d
+- https://alligator.io/vuejs/unit-testing-karma-mocha/
+- https://blog.kloud.com.au/2017/03/22/dependency-injection-in-vuejs-app-with-typescript/
+</textarea>
+</section>
+<section data-markdown data-transition="convex">
+<textarea data-template>
+## Questions?
+![Questions](img/question.jpg)
+</textarea>
+</section>
+<section data-markdown data-transition="zoom">
+<textarea data-template>
+![](img/mustache.jpg)
+</textarea>
+</section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+    <style>
+      /*.slide-background {
+        background: url(mw.png) center center no-repeat;
+      }*/
+    </style>
+  </body>
+</html>
