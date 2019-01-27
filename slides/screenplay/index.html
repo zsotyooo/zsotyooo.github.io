@@ -7,7 +7,7 @@
     <title>reveal.js</title>
 
     <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/night.css">
+    <link rel="stylesheet" href="css/theme/beige.css">
 
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -25,7 +25,7 @@
     <div class="reveal">
       <div class="slides">
 
-<section data-markdown>
+<section data-markdown data-transition="zoom" data-transition-speed="slow">
 <textarea data-template>
 ## “All the world's a stage
 ## And all the men and women merely players”
@@ -33,11 +33,18 @@ _William Shakespeare_
 </textarea>
 </section>
 
-<section data-markdown>
+<!-- <section data-markdown>
 <textarea data-template>
 ### Work
 1. activity involving mental or physical effort done in order to achieve a result.
 2. a task or tasks to be undertaken.
+</textarea>
+</section> -->
+
+<section data-markdown data-transition="convex-in slide-out" data-transition-speed="slow">
+<textarea data-template>
+## The idea
+Everything can be described as a screenplay.
 </textarea>
 </section>
 
@@ -60,99 +67,93 @@ _William Shakespeare_
 <section data-markdown>
 <textarea data-template>
 ### 1. Stage
-- The **environment** that everything is in
+The **environment** that everything is in
 
-_E.g: A pub_
-</textarea>
-</section>
+_(E.g: A pub)_
 
-<section data-markdown>
-<textarea data-template>
 ### 2. Cast
-- All the possible **Actors**
+All the possible **Actors**
 
-_E.g: Adam, Josh, Mary_
+_(E.g: Adam, Josh, Mary)_
 </textarea>
 </section>
 
 <section data-markdown>
 <textarea data-template>
 ### 3. Actor
-- Who can make **Interactions**
-- In order to perfom **Tasks**
-- Through their **Abilities**
+Through their **Abilities**
 
-_E.g: Adam_
-</textarea>
-</section>
+they can make **Interactions**
 
-<section data-markdown>
-<textarea data-template>
+in order to perfom **Tasks**
+
+_(E.g: Adam)_
+
 ### 4. Ability
-- Capability to make **Interactions**
-- In order to to perform a **Task**
+Capability to make **Interactions**
 
-_E.g: To be able to Drink_
+_(E.g: To be able to Drink)_
 </textarea>
 </section>
 
 <section data-markdown>
 <textarea data-template>
 ### 5. Interaction
-- Things that can be done to a **Target**
+Things that can be done to a **Target**
 
-_E.g: Drink_
-</textarea>
-</section>
+_(E.g: Drink)_
 
-<section data-markdown>
-<textarea data-template>
 ### 6. Task
-- A set of **Interactions** (or smaller tasks)
-- Performed on the **Target**
+A set of **Interactions** (or smaller tasks)
 
-_E.g: Drink the beer_
+performed on the **Target**
+
+_(E.g: Drink the beer)_
 </textarea>
 </section>
 
 <section data-markdown>
 <textarea data-template>
 ### 7. Target
-- Everything that you can observe (ask **Questions** about)
-- and interact with (perform **Interactions**, **Tasks**)
+Everything that you can observe (ask **Questions** about)
 
-_E.g: The beer_
-</textarea>
-</section>
+and interact with (perform **Interactions**, **Tasks**)
 
-<section data-markdown>
-<textarea data-template>
+_(E.g: The beer)_
+
 ### 8. Question
-- Some property of a **Target**
+Some property of a **Target**
 
-_E.g: The amount property of the beer_
+_(E.g: The amount property of the beer)_
 </textarea>
 </section>
 
 <section data-markdown>
 <textarea data-template>
 ### 9. Answer
-- The result of the **Question** that you can **Assert** against
+The result of the **Question** that you can **Assert** against
 
-_E.g: The amount of beer left_
+_(E.g: The amount of beer left)_
+
+### 10. Assertion
+A comparison method that we can use to compare the **Answer** to the expected result
+
+_(E.g: Checking if the amount of beer left is 0)_
 </textarea>
 </section>
 
 <section data-markdown>
 <textarea data-template>
-### 10. Assertion
-- A comparison method that we can use to compare the **Answer** to the expected result
-
-_E.g: Checking if the amount of beer left is 0_
+## The sequence of things
+1. Calling for an **Actor** from the **Cast** to enter the **Stage**
+2. Asking the **Actor** to perform a **Task**
+3. The **Actor** starts to make **Interactions** with the **Targets** using his **Abilities**
+4. The **Actor** asks **Questions** about **Targets**
+5. The **Actor** **Asserts** against the **Answers**
 </textarea>
 </section>
 
-<section data-markdown>
+<section data-markdown data-transition="convex-in slide-out" data-transition-speed="slow">
 <textarea data-template>
 ## Now let's see an example screenplay
 
@@ -184,22 +185,22 @@ Given that Pete has his shoes on
 <section data-markdown>
 <textarea data-template>
 ### Let's identify the concepts
-1. **Stage** _Pete's home_<!-- .element: class="fragment" -->
-2. **Cast** _Pete, and his mom_<!-- .element: class="fragment" -->
-3. **Actor** _Pete_<!-- .element: class="fragment" -->
-4. **Ability** _fine finger movement_<!-- .element: class="fragment" -->
-5. **Interaction** _grabbing, tying a knot_<!-- .element: class="fragment" -->
-6. **Task** _tying the shoelaces_<!-- .element: class="fragment" -->
-7. **Target** _shoelaces, shoes_<!-- .element: class="fragment" -->
-8. **Question** _the property of being tied of the shoelaces_<!-- .element: class="fragment" -->
-9. **Answer** _tied or not tied_<!-- .element: class="fragment" -->
-10. **Assertion** _check if it's tied_<!-- .element: class="fragment" -->
+1. **Stage** _Pete's home_
+2. **Cast** _Pete, and his mom_
+3. **Actor** _Pete_
+4. **Ability** _fine finger movement_
+5. **Interaction** _grabbing, tying a knot_
+6. **Task** _tying the shoelaces_
+7. **Target** _shoelaces, shoes_
+8. **Question** _the property of being tied of the shoelaces_
+9. **Answer** _tied or not tied_
+10. **Assertion** _check if it's tied_
 </textarea>
 </section>
 
-<section data-markdown>
+<section data-markdown data-transition="convex-in slide-out" data-transition-speed="slow">
 <textarea data-template>
-## In E2E testing
+## Another example in E2E testing
 
 A web component asks the user to enter their name, and displays a welcome message.
 </textarea>
@@ -208,28 +209,28 @@ A web component asks the user to enter their name, and displays a welcome messag
 <section data-markdown>
 <textarea data-template>
 ### Let's break it down
-1. **Stage** _the browser, and the users_<!-- .element: class="fragment" -->
-2. **Cast** _the users_<!-- .element: class="fragment" -->
-3. **Actor** _James_<!-- .element: class="fragment" -->
-4. **Ability** _browse the web_<!-- .element: class="fragment" -->
-5. **Interaction** _clicking, entering text..._<!-- .element: class="fragment" -->
-6. **Task** _enter the name into the text box_<!-- .element: class="fragment" -->
-7. **Target** _text box, welcome message_<!-- .element: class="fragment" -->
-8. **Question** _the text property of the welcome message_<!-- .element: class="fragment" -->
-9. **Answer** _the text content of the welcome message_<!-- .element: class="fragment" -->
-10. **Assertion** _is it contain the text of James?_<!-- .element: class="fragment" -->
+1. **Stage** _the browser, and the users_
+2. **Cast** _the users_
+3. **Actor** _James_
+4. **Ability** _browse the web_
+5. **Interaction** _clicking, entering text..._
+6. **Task** _enter the name into the text box_
+7. **Target** _text box, welcome message_
+8. **Question** _the text property of the welcome message_
+9. **Answer** _the text content of the welcome message_
+10. **Assertion** _is it contain the text of James?_
 </textarea>
 </section>
 
-<section data-markdown>
+<section data-markdown data-transition="zoom" data-transition-speed="slow">
 <textarea data-template>
 ## Serenity-js
 A javascript implementation of the screenplay pattern.
-- [Documentation](https://serenity-js.org/)
-- [Core concepts](https://github.com/jan-molak/serenity-js/tree/master/packages/core/src/screenplay)
-- [Protractor browser screenplay concepts](https://github.com/jan-molak/serenity-js/tree/master/packages/serenity-js/src/serenity-protractor/screenplay)
-- [Rest api screenplay concepts](https://github.com/jan-molak/serenity-js/tree/master/packages/rest/src/screenplay)
-- [My E2E testing example](https://github.com/zsotyooo/stencil-serenity-cucumber-demo)
+- [Documentation &#9112;](https://serenity-js.org/)
+- [Core concepts &#9112;](https://github.com/jan-molak/serenity-js/tree/master/packages/core/src/screenplay)
+- [Protractor browser screenplay concepts &#9112;](https://github.com/jan-molak/serenity-js/tree/master/packages/serenity-js/src/serenity-protractor/screenplay)
+- [Rest api screenplay concepts &#9112;](https://github.com/jan-molak/serenity-js/tree/master/packages/rest/src/screenplay)
+- [My E2E testing example &#9112;](https://github.com/zsotyooo/stencil-serenity-cucumber-demo)
 </textarea>
 </section>
       </div>
@@ -237,10 +238,7 @@ A javascript implementation of the screenplay pattern.
 
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
-    <link rel="stylesheet" href="css/theme/beige.css">
-
-    <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+    
 
     <script>
       // More info about config & dependencies:
@@ -261,6 +259,16 @@ A javascript implementation of the screenplay pattern.
         background-size: cover;
         background-position: 50% 0%;
         background-repeat: no-repeat;
+      }
+
+      .reveal .slide-background:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(255,255,255,0.7);
       }
     </style>
   </body>
