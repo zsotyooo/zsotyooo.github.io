@@ -59,7 +59,7 @@ _William Shakespeare_
 
 <section data-markdown>
 <textarea data-template>
-### Stage
+### 1. Stage
 - The **environment** that everything is in
 
 _E.g: A pub_
@@ -68,7 +68,7 @@ _E.g: A pub_
 
 <section data-markdown>
 <textarea data-template>
-### Crew
+### 2. Cast
 - All the possible **Actors**
 
 _E.g: Adam, Josh, Mary_
@@ -77,9 +77,10 @@ _E.g: Adam, Josh, Mary_
 
 <section data-markdown>
 <textarea data-template>
-### Actor
-- The preson, or object who will perform the **Tasks**
-- Has **Abilities**
+### 3. Actor
+- Who can make **Interactions**
+- In order to perfom **Tasks**
+- Through their **Abilities**
 
 _E.g: Adam_
 </textarea>
@@ -87,7 +88,7 @@ _E.g: Adam_
 
 <section data-markdown>
 <textarea data-template>
-### Ability
+### 4. Ability
 - Capability to make **Interactions**
 - In order to to perform a **Task**
 
@@ -97,57 +98,57 @@ _E.g: To be able to Drink_
 
 <section data-markdown>
 <textarea data-template>
-### Interaction
+### 5. Interaction
 - Things that can be done to a **Target**
 
-_E.g: Lifting a glass, Drinking liquids_
+_E.g: Drink_
 </textarea>
 </section>
 
 <section data-markdown>
 <textarea data-template>
-### Task
+### 6. Task
 - A set of **Interactions** (or smaller tasks)
 - Performed on the **Target**
 
-_E.g: Drinking the beer_
+_E.g: Drink the beer_
 </textarea>
 </section>
 
 <section data-markdown>
 <textarea data-template>
-### Target
+### 7. Target
 - Everything that you can observe (ask **Questions** about)
 - and interact with (perform **Interactions**, **Tasks**)
 
-_E.g: The beer, the glass_
+_E.g: The beer_
 </textarea>
 </section>
 
 <section data-markdown>
 <textarea data-template>
-### Question
+### 8. Question
 - Some property of a **Target**
 
-_E.g: The contents of a glass_
+_E.g: The amount property of the beer_
 </textarea>
 </section>
 
 <section data-markdown>
 <textarea data-template>
-### Answer
+### 9. Answer
 - The result of the **Question** that you can **Assert** against
 
-_E.g: The amount of beer in the glass_
+_E.g: The amount of beer left_
 </textarea>
 </section>
 
 <section data-markdown>
 <textarea data-template>
-### Assertion
+### 10. Assertion
 - A comparison method that we can use to compare the **Answer** to the expected result
 
-_E.g: Checking the amount of beer in the glass_
+_E.g: Checking if the amount of beer left is 0_
 </textarea>
 </section>
 
@@ -190,25 +191,45 @@ Given that Pete has his shoes on
 5. **Interaction** _grabbing, tying a knot_<!-- .element: class="fragment" -->
 6. **Task** _tying the shoelaces_<!-- .element: class="fragment" -->
 7. **Target** _shoelaces, shoes_<!-- .element: class="fragment" -->
-8. **Question** _Are the shoelaces tied?_<!-- .element: class="fragment" -->
-9. **Answer** _yes or no_<!-- .element: class="fragment" -->
-10. **Assertion** _is it yes?_<!-- .element: class="fragment" -->
+8. **Question** _the property of being tied of the shoelaces_<!-- .element: class="fragment" -->
+9. **Answer** _tied or not tied_<!-- .element: class="fragment" -->
+10. **Assertion** _check if it's tied_<!-- .element: class="fragment" -->
 </textarea>
 </section>
 
 <section data-markdown>
 <textarea data-template>
-### In E2E testing
-1. **Stage** _The browser, and the users_<!-- .element: class="fragment" -->
-2. **Cast** _The users_<!-- .element: class="fragment" -->
+## In E2E testing
+
+A web component asks the user to enter their name, and displays a welcome message.
+</textarea>
+</section>
+
+<section data-markdown>
+<textarea data-template>
+### Let's break it down
+1. **Stage** _the browser, and the users_<!-- .element: class="fragment" -->
+2. **Cast** _the users_<!-- .element: class="fragment" -->
 3. **Actor** _James_<!-- .element: class="fragment" -->
-4. **Ability** _To use browser_<!-- .element: class="fragment" -->
-5. **Interaction** _Clicking, Tapping, Typing..._<!-- .element: class="fragment" -->
-6. **Task** _To enter name to the text box_<!-- .element: class="fragment" -->
-7. **Target** _Name text box, Welcome message_<!-- .element: class="fragment" -->
-8. **Question** _The text content of the Welcome message_<!-- .element: class="fragment" -->
-9. **Answer** _The actual value of this text_<!-- .element: class="fragment" -->
-10. **Assertion** _Is it contain the name of James?_<!-- .element: class="fragment" -->
+4. **Ability** _browse the web_<!-- .element: class="fragment" -->
+5. **Interaction** _clicking, entering text..._<!-- .element: class="fragment" -->
+6. **Task** _enter the name into the text box_<!-- .element: class="fragment" -->
+7. **Target** _text box, welcome message_<!-- .element: class="fragment" -->
+8. **Question** _the text property of the welcome message_<!-- .element: class="fragment" -->
+9. **Answer** _the text content of the welcome message_<!-- .element: class="fragment" -->
+10. **Assertion** _is it contain the text of James?_<!-- .element: class="fragment" -->
+</textarea>
+</section>
+
+<section data-markdown>
+<textarea data-template>
+## Serenity-js
+A javascript implementation of the screenplay pattern.
+- [Documentation](https://serenity-js.org/)
+- [Core concepts](https://github.com/jan-molak/serenity-js/tree/master/packages/core/src/screenplay)
+- [Protractor browser screenplay concepts](https://github.com/jan-molak/serenity-js/tree/master/packages/serenity-js/src/serenity-protractor/screenplay)
+- [Rest api screenplay concepts](https://github.com/jan-molak/serenity-js/tree/master/packages/rest/src/screenplay)
+- [My E2E testing example](https://github.com/zsotyooo/stencil-serenity-cucumber-demo)
 </textarea>
 </section>
       </div>
