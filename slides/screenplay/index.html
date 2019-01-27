@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+<section data-markdown>
+<textarea data-template>
+## “All the world's a stage
+## And all the men and women merely players”
+_William Shakespeare_
+</textarea>
+</section>
+
+<section data-markdown>
+<textarea data-template>
+### Work
+1. activity involving mental or physical effort done in order to achieve a result.
+2. a task or tasks to be undertaken.
+</textarea>
+</section>
+
+<section data-markdown>
+<textarea data-template>
+### Concepts in Screenplay design
+1. **Stage**
+2. **Cast**
+3. **Actor**
+4. **Ability**
+5. **Interaction**
+6. **Task**
+7. **Target**
+8. **Question**
+9. **Answer**
+10. **Assertion**
+</textarea>
+</section>
+
+<section data-markdown>
+<textarea data-template>
+### Stage
+- The **environment** that everything is in
+
+_E.g: A pub_
+</textarea>
+</section>
+
+<section data-markdown>
+<textarea data-template>
+### Crew
+- All the possible **Actors**
+
+_E.g: Adam, Josh, Mary_
+</textarea>
+</section>
+
+<section data-markdown>
+<textarea data-template>
+### Actor
+- The preson, or object who will perform the **Tasks**
+- Has **Abilities**
+
+_E.g: Adam_
+</textarea>
+</section>
+
+<section data-markdown>
+<textarea data-template>
+### Ability
+- Capability to make **Interactions**
+- In order to to perform a **Task**
+
+_E.g: To be able to Drink_
+</textarea>
+</section>
+
+<section data-markdown>
+<textarea data-template>
+### Interaction
+- Things that can be done to a **Target**
+
+_E.g: Lifting a glass, Drinking liquids_
+</textarea>
+</section>
+
+<section data-markdown>
+<textarea data-template>
+### Task
+- A set of **Interactions** (or smaller tasks)
+- Performed on the **Target**
+
+_E.g: Drinking the beer_
+</textarea>
+</section>
+
+<section data-markdown>
+<textarea data-template>
+### Target
+- Everything that you can observe (ask **Questions** about)
+- and interact with (perform **Interactions**, **Tasks**)
+
+_E.g: The beer, the glass_
+</textarea>
+</section>
+
+<section data-markdown>
+<textarea data-template>
+### Question
+- Some property of a **Target**
+
+_E.g: The contents of a glass_
+</textarea>
+</section>
+
+<section data-markdown>
+<textarea data-template>
+### Answer
+- The result of the **Question** that you can **Assert** against
+
+_E.g: The amount of beer in the glass_
+</textarea>
+</section>
+
+<section data-markdown>
+<textarea data-template>
+### Assertion
+- A comparison method that we can use to compare the **Answer** to the expected result
+
+_E.g: Checking the amount of beer in the glass_
+</textarea>
+</section>
+
+<section data-markdown>
+<textarea data-template>
+## Now let's see an example screenplay
+
+Pete is a 6 year old who has just learned to tie his shoes.
+He asks his mom if He can go out and play.
+His mom tells him that He can, but only if He ties his shoes himself
+</textarea>
+</section>
+
+<section data-markdown>
+<textarea data-template>
+### Gherkin
+``` gherkin
+Feature: Putting on shoes
+
+Scenario: Tying shoelaces
+In order to the shoes to fit, the shoelaces has to be tied.
+
+Given that Pete has his shoes on
+  And the shoelaces are not tied
+ When Pete grabs the left shoelace
+  And Pete grabs the right shoelace
+  And Pete ties the left shoelace to the right shoelace
+ Then the left shoelace and the right shoelace should be tied together
+```
+</textarea>
+</section>
+
+<section data-markdown>
+<textarea data-template>
+### Let's identify the concepts
+1. **Stage** _Pete's home_<!-- .element: class="fragment" -->
+2. **Cast** _Pete, and his mom_<!-- .element: class="fragment" -->
+3. **Actor** _Pete_<!-- .element: class="fragment" -->
+4. **Ability** _fine finger movement_<!-- .element: class="fragment" -->
+5. **Interaction** _grabbing, tying a knot_<!-- .element: class="fragment" -->
+6. **Task** _tying the shoelaces_<!-- .element: class="fragment" -->
+7. **Target** _shoelaces, shoes_<!-- .element: class="fragment" -->
+8. **Question** _Are the shoelaces tied?_<!-- .element: class="fragment" -->
+9. **Answer** _yes or no_<!-- .element: class="fragment" -->
+10. **Assertion** _is it yes?_<!-- .element: class="fragment" -->
+</textarea>
+</section>
+
+<section data-markdown>
+<textarea data-template>
+### In E2E testing
+1. **Stage** _The browser, and the users_<!-- .element: class="fragment" -->
+2. **Cast** _The users_<!-- .element: class="fragment" -->
+3. **Actor** _James_<!-- .element: class="fragment" -->
+4. **Ability** _To use browser_<!-- .element: class="fragment" -->
+5. **Interaction** _Clicking, Tapping, Typing..._<!-- .element: class="fragment" -->
+6. **Task** _To enter name to the text box_<!-- .element: class="fragment" -->
+7. **Target** _Name text box, Welcome message_<!-- .element: class="fragment" -->
+8. **Question** _The text content of the Welcome message_<!-- .element: class="fragment" -->
+9. **Answer** _The actual value of this text_<!-- .element: class="fragment" -->
+10. **Assertion** _Is it contain the name of James?_<!-- .element: class="fragment" -->
+</textarea>
+</section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <link rel="stylesheet" href="css/theme/beige.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+    <style>
+      .reveal .slide-background {
+        background-image: url(img/bg.jpg);
+        background-size: cover;
+        background-position: 50% 0%;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </body>
+</html>
