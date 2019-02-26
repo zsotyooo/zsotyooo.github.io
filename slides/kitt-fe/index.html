@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/solarized.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+<section data-markdown data-transition="zoom">
+<textarea data-template>
+# The your now project
+</textarea>
+</section>
+<section data-markdown data-transition="convex-in slide-out">
+<textarea data-template>
+## Drupal
+![Drupal](https://cdn-images-1.medium.com/max/1600/1*Xo-krVT39JeOpry1oooa5w.png)
+</textarea>
+</section>
+<section data-markdown data-transition="slide">
+<textarea data-template>
+### advantages
+1. Paragraphs module = every page can make use of every block
+2. Lando for local development
+3. Config based structures (mostly everything can be clicked together)
+4. know how
+</textarea>
+</section>
+<section data-markdown data-transition="slide">
+<textarea data-template>
+### disadvantages
+4. Very slow page loads
+5. Lot of unnecessary overhead
+6. Working around the concepts in drupal vs the simple things we really needed
+7. Core bugs
+</textarea>
+</section>
+<section data-markdown data-transition="convex-in slide-out">
+<textarea data-template>
+## Fractal
+![Fractal](https://d33wubrfki0l68.cloudfront.net/5d2e88eb1e2b69f3f8b3a3372b6e4b3b4f095130/2159b/hero.png)
+</textarea>
+</section>
+<section data-markdown data-transition="slide">
+<textarea data-template>
+### Styleguide driven development
+1. Decoupled development
+2. We had hot reload
+3. Cross device testing made easy
+4. Very fast learning curve
+5. Sometimes the structures in drupal didn't fit what we imagined which lead to some extra overhead
+</textarea>
+</section>
+<section data-markdown data-transition="convex-in slide-out">
+<textarea data-template>
+## Stencil
+![Stencil](https://stenciljs.com/assets/img/logo.png)
+1. An angular inspired preprocessor for native web components (custom elements)
+2. Built by the ionic team
+3. The bases of the ionic component library since version 4.
+</textarea>
+</section>
+<section data-markdown data-transition="slide">
+<textarea data-template>
+### Why native web components and Stencil
+1. It's fast, and will be even faster as browsers evolve
+2. It hides unnesessary content in the shadow DOM
+3. Encapsulates functionality
+4. Reusable in all kinds of projects
+5. Lazy loading
+6. Typescript &lt;3
+7. Comes with very useful polyfills
+</textarea>
+</section>
+<section data-markdown data-transition="slide">
+<textarea data-template>
+### Use cases
+1. Simple buttons, SVG-s, and such
+2. Wrapping motion design elements
+3. Wrapping simple functionality (show hide, accordion...)
+4. Simplify and break down bit more complex concepts
+5. External "embed" code
+6. Inserting bodymovin animations
+</textarea>
+</section>
+<section data-markdown data-transition="convex-in slide-out">
+<textarea data-template>
+### Bodymovin
+![Bodymovin](https://aescripts.com/media/catalog/product/cache/1/image/538x/040ec09b1e35df139433887a97daa66f/1/2/1240x496_shadow_tn.png)
+1. Bodymovin is an Aftereffects plugin
+2. It saves the animation into SVG and a set of instructions in JSON format
+3. lottie javascript library for handling these on the web (airbnb, http://lottiefiles.com)
+</textarea>
+</section>
+<section data-markdown data-transition="slide">
+<textarea data-template>
+### Web components We made for lottie
+1. Embedding a lottie animation
+2. Embedding a lottie animation with scroll trigger
+3. Slider that uses an animation
+4. The logo itself
+</textarea>
+</section>
+<section data-markdown data-transition="convex-in slide-out">
+<textarea data-template>
+### ETC
+1. Native CSS with only postCss plugins
+2. The "scaling up" techique
+3. ScrollMaginc
+4. GreenSock
+5. Responsiveness with swiper.js
+</textarea>
+</section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+    <style>
+      /*.slide-background {
+        background: url(mw.png) center center no-repeat;
+      }*/
+    </style>
+  </body>
+</html>
